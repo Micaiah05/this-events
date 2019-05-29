@@ -39,3 +39,20 @@ function showSecretMenu(){
 
 
 
+
+var thumbsElem = document.getElementsByClassName('thumb')
+console.log(thumbsElem);
+
+for(var i = 0; i < thumbsElem.length; i++){
+    thumbsElem[i].addEventListener('click', countUp)
+    var counter = document.createElement('div')
+    counter.className = 'count'
+
+    thumbsElem[i].appendChild(counter);
+
+}
+
+function countUp(){
+    var counter = this.querySelector('.count')
+    counter.innerHTML++;
+}
